@@ -16,12 +16,13 @@ class Wizard {
   }
   cast (spell) {
     this.spellCount++;
-    if (this.spellCount > 2) {
+    if (this.spellCount >= 3) {
       this.isRested = false;
-      return "I SHALL NOT CAST";
     } else {
+      if (this.spellCount <4)
       return spell.toUpperCase();
     }
+    return "I SHALL NOT CAST";
   }
 }
 module.exports = Wizard;
